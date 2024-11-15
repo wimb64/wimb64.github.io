@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="js/main.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Nintendo Fan</title>
+</head>
+<body>   
+    <nav>
+        <section class="nav-title">
+            <a href="index.html"><h1>Nintendo Fan</h1></a>
+        </section>
+        <ul>
+            <li><a href="bestgames.html">Best Games</a></li>
+            <li><a href="consoles.html">Consoles</a></li>
+            <li class="active-tab"><a href="mods.html">Mod Shop</a></li>
+            <li><a href="sources.html">Sources</a></li>
+        </ul>
+    </nav>
+
+
+        <section class="background-stuff">
+
+            <section id="cart-wrap">
+                <section id="cart-inventory"></section>
+                <section id="all-stuff"></section>
+            </section>
+
+            <template id="mod-template">
+                <section class="mod-item card">
+                    <figure>
+                        <img class="mod-image">
+                    </figure>
+                    <section class="mod-info">
+                        <section class="mod-text">
+                            <section class="mod-name"></section>
+                            <section class="mod-price"></section>
+                        </section>
+                        <button class="cart mod-add">Add</button>
+                    </section>
+                </section>
+            </template>
+
+            <template id="cart-template">
+                <section class="cart-item">
+                  <input class="cart-quantity" type="number" min="0">
+                  <section class="cart-name"></section>
+                  <button class="cart-delete cart">X</button>
+                </section>
+            </template>
+
+            <template id="cart-checkout-template">
+                <section class="cart-go">
+                    <button class="cart-empty cart" onclick="cart.empty()">Empty</button>
+                    <button class="cart-checkout cart" onclick="cart.checkout()">Checkout</button>
+                </section>
+            </template>
+        </section>    
+    </body>
+</html>
